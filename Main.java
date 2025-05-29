@@ -59,7 +59,7 @@ public class Main {
                 scanner.nextLine(); // Limpa buffer em caso de erro
             }
 
-            System.out.print("Deseja realizar outro cálculo? (s/n): ");
+            System.out.print("Deseja realizar outro cálculo? (sim para continuar ou qualquer outra letra para fechar): ");
             char resposta = scanner.next().charAt(0);
             continuar = (resposta == 's' || resposta == 'S');
         }
@@ -84,11 +84,11 @@ public class Main {
     }
 
     public static void calcularBhaskara(double a, double b, double c) {
+
         if (a == 0) {
             System.out.println("Erro: O coeficiente A não pode ser zero em uma equação do 2º grau.");
             return;
         }
-
         double delta = Math.pow(b, 2) - 4 * a * c;
 
         System.out.printf("Delta: %.2f\n", delta);
